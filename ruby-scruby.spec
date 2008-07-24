@@ -1,7 +1,7 @@
 Summary:	A portable, customizable packet creation
 Name:		ruby-scruby
 Version:	0.3
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Development/Libraries
 Source0:	http://sylv1.tuxfamily.org/projects/scruby/scruby-%{version}.tar.gz
@@ -10,8 +10,9 @@ URL:		http://sylv1.tuxfamily.org/projects/scruby.html
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 BuildRequires:	setup.rb
-#BuildArch:	noarch
 %{?ruby_mod_ver_requires_eq}
+Requires:	ruby-pcaprub
+#BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # not noarch only due ruby packaging
